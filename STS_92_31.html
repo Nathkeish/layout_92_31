@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+        <title>Layout Website</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--Membuat Header-->
+        <div class="header">
+            <h1>TUGAS HTML & CSS</h1>
+        </div>
+        <!--Membuat menu/navigator bar-->
+        <div class="topnav">
+            <a href="index.html">Biodata</a>
+            <a href="table.html">Table</a>
+            <a href="List.html">List</a>
+            <a href="STS_92_31.html">STS</a>
+        </div>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore</title>
+    <!-- Menambahkan Google Fonts agar sesuai ketentuan font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="STS_92_31.css">
+</head>
+<body>
+<center>
+  <h1 class="judul-utama">Singapore, Your Perfect Designation</h1>
+  <h2>By: Keisha 92/31 </h2>
+</center>
+
+    <!-- BOX WISATA (Galeri Foto) -->
+    <div class="Wisata"> 
+      <div class="content">
+        <div class="card">
+          <img src="airport.jpg" alt="entrance">
+        </div>
+        <div class="card">
+          <img src="bythebay.jpg" alt="toy story"> 
+        </div>
+        <div class="card">
+          <img src="marinabay.jpg" alt="tinkerbelle">
+        </div>
+        <div class="card">
+          <img src="singa.jpg" alt="teaparty"> 
+        </div>
+        <div class="card">
+          <img src="universalstudios.jpg" alt="beautybeast">
+        </div>
+        <div class="card">
+          <img src="view.jpg" alt="disneycastle">
+        </div>
+      </div> 
+    </div>
+
+    <!-- BOX ARTIKEL  -->
+    <div class="artikel-box">
+      <h3>Best Experience in Singapore</h3>
+      <p>
+        Singapore, which is its own independent country, is an island country in Southeast Asia. It is widely known for its modern global city-state, showcasing its iconic skyline, strict cleanliness, safety, and diverse food. It’s also known for their compact-sized city, often referred to by its famous nickname, "The Little Red Dot." Despite its massive global economic and financial presence, it remains one of the smallest sovereign nations in the world. The national flag features two equal horizontal sections of red above white, with a white crescent moon and five white stars in the upper left corner. Their culture is also a vibrant, multicultural mosaic blending Chinese, Malay, Indian, and Eurasian traditions. 
+      </p>
+      <p>
+        I personally love Singapore based on my own experiences, as it is also the first ever country I’ve ever stepped foot on besides Indonesia, which is my homeland. I’ve visited this country twice, once when I was a toddler, and second one spent during the 2026 new years. The vibes of the country, especially when it’s during the night, is one of the main reasons I’d fallen in love with this country. I remember walking the streets with my mom, my brother, alongside my cousin the night before new years, and we just walked and talked, spending the best night ever. Its sight attractions don't fail to make any vacation memorable as well.
+      </p>
+      <p>
+        During the first trip I had to Singapore, without my cousin, I had spent it on sightseeing its many beautiful attractions with my family. Such as, Gardens by the Bay, Universal Studios Singapore, and of course, its most iconic airport, the Changi Airport. The country’s modern vibes just feel so unreal, especially of how clean the country generally is, not shocking that it is one of the cleanest cities in the world. Even as a young child during that first visit, I remember being completely mesmerized by the jewel-shaped structures and the endless indoor greenery. Returning years later for the 2026 New Year's celebration only deepened my love for the country.
+
+      </p>
+      <p>
+        I would personally highly recommend this country as a vacation with family as it has so many attractions and experiences just perfect for it. Ranging from kid-friendly fun experiences like Universal Studios Singapore, to adult calming, sightseeing, freeroaming like Gardens by the Bay. Definitely a good choice to release stress after a busy pre-vacation rush. You never have to worry about safety or getting lost, which allows everyone to completely let their guard down and just enjoy being together. Whether you are navigating the city's futuristic architecture by day or simply strolling through its glowing, cooler streets at night, the atmosphere naturally forces you to slow down and live in the moment. It bridges the gap between thrilling entertainment and pure, peaceful relaxation better than almost anywhere else. For my family and me, it wasn’t just a holiday; it was a perfect escape that gave us stories we will keep telling for years, proving that even the smallest dot on the map can leave the biggest impact on your heart.
+      </p>
+    </div>
+
+    <div id="falling-container"></div>
+
+    <!-- Audio Background  -->
+    <audio id="bg-music" loop>
+      <source src="grentperez-cherry-wine-[instrumental]-made-with-Voicemod.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+  function createStar() {
+    const container = document.getElementById('falling-container');
+    const star = document.createElement('div');
+
+    star.textContent = '⭐';
+    star.classList.add('mickey-item');
+
+    star.style.left = Math.random() * 100 + 'vw';
+
+    const size = Math.random() * 30 + 20;
+    star.style.fontSize = size + 'px';
+
+    const duration = Math.random() * 4 + 4;
+    star.style.animationDuration = duration + 's';
+
+    container.appendChild(star);
+
+    setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  setInterval(createStar, 400);
+
+  document.addEventListener('click', function() {
+    const music = document.getElementById('bg-music');
+    if (music.paused) {
+      music.play().catch(error => {
+        console.log("Autoplay dicegah browser:", error);
+      });
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>
+ <!--Membuat Footer-->
+        <div class="footer">
+            <p>Keisha 92/31</p>
+        </div>
+    </body>
+</html>
